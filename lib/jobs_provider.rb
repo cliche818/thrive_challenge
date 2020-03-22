@@ -10,14 +10,15 @@ class JobsProvider
       PRIMARY_BUSINESSES.each do |business|
 
         job = {
-          role_name: role,
-          primary_business: business
+          roleName: role,
+          primaryBusiness: business
         }
 
         if role == 'Fullstack Engineer' || (role ==  'Product Manager' && business == 'Software development')
           TECHNICAL_BACKGROUND_REQUIRED.each do |background_required|
-            job[:technical_background] = background_required
-            jobs << job
+            job2 = job.clone
+            job2[:technicalBackground] = background_required
+            jobs << job2
           end
         else
           jobs << job
