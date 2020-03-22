@@ -1,24 +1,10 @@
 # README
+Installation instructions (assuming machine has ruby 2.6.3 and bundler)
+- in the root folder, bundle install
+- rake db:create + rake db:migrate (requires sqlite to be installed)
+- run rails test (to see unit tests)
+- run rails s (the link for the job listings is localhost:3000/jobs/index)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Added gem:
+- minitest-reporters (to get colour and easier to read output when running unit tests)
