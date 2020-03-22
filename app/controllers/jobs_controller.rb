@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   def index
-    render json: {}
+    jobs = JobsProvider.combinations
+    render json: jobs
   end
 end
